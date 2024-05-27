@@ -1,0 +1,41 @@
+{
+  "name": "best2go/b2g-commission",
+  "description": "export library",
+  "type": "project",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Best2Go\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Best2Go\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Mykola Lavryk",
+      "email": "nick.lavrik@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-ctype": "*",
+    "ext-iconv": "*",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.8",
+    "symfony/console": "^5.4|^6.4|^7.0",
+    "symfony/dotenv": "^5.4|^6.4|^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5|^8.5"
+  },
+  "scripts": {
+    "phpunit": "./vendor/bin/phpunit -vd memory_limit=-1"
+  },
+  "config": {
+  }
+}
