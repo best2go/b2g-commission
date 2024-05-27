@@ -27,7 +27,7 @@ all: $(addprefix phpunit-,$(PHP_MATRIX))
 
 .PHONY: phpunit-%
 phpunit-%: info-% update-%
-	$(DOCKER_RUN) php:$*-cli-alpine vendor/bin/phpunit $(CMD_ARGS)
+	$(DOCKER_RUN) php:$*-cli-alpine vendor/bin/phpunit --colors=never --no-interaction $(CMD_ARGS)
 	$(DOCKER_RUN) composer config --unset platform
 
 .PHONY: info-%
@@ -36,7 +36,7 @@ info-%:
 
 .PHONY: update-%
 update-%: platform-%
-	$(DOCKER_RUN) composer update
+	$(DOCKER_RUN) composer update --no-ansi --no-interaction
 
 .PHONY: platform-%
 platform-%:
