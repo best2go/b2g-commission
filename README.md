@@ -33,6 +33,8 @@ Process finished with exit code 0
 
 ## phpunit
 ```
+$ make
+
 ---------------------------
 PHP-7.4
 
